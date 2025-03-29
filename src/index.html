@@ -3,29 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Gallery</title>
+    <title>Image Search App</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <!-- Loader -->
+
     <span class="loader"></span>
 
-    <!-- Search form -->
     <form class="form" id="search-form">
       <input
-        class="search-input"
         type="text"
         name="searchQuery"
         autocomplete="off"
         placeholder="Search images..."
       />
-      <button type="submit" class="search-button">Search</button>
+      <button type="submit">Search</button>
     </form>
 
-    <!-- Gallery -->
     <ul class="gallery"></ul>
 
-    <!-- Load more button -->
     <button type="button" class="load-more">Load More</button>
 
     <script type="module" src="./main.js"></script>
