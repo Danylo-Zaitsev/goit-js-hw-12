@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-12/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-js-hw-11</title>
-    <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-BH9GyP-n.js">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-DumFYO8Z.css">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-DvPDDfy5.css">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <title>Image Search</title>
+  
+  <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-Db2TdIkw.js">
+  <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-CWKLx11g.css">
+  <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-Bdan9flv.css">
+</head>
+<body>
+  <main>
     <form class="form">
-      <label>
-        <input
-          type="text"
-          name="search-text"
-          placeholder="Search images..."
-          required
-          class="inp-css"
-        />
-      </label>
-      <button type="submit" class="button">Search</button>
+      <input type="text" name="search-text" placeholder="Search images..." required>
+      <button type="submit">Search</button>
     </form>
+    <div class="loader"></div>
+    <!-- <span class="loader hidden"></span> -->
+
     <ul class="gallery"></ul>
 
-    <button class="js-button hidden button" type="submit">Load more</button>
+    <button class="load-more hidden">Load more</button>
+  </main>
 
-    <span class="loader hidden"></span>
-
-  </body>
+</body>
 </html>
