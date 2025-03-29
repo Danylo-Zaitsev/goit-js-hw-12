@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Image Search</title>
-  
-  <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
-  <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-Db2TdIkw.js">
-  <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-CWKLx11g.css">
-  <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-Bdan9flv.css">
-</head>
-<body>
-  <main>
-    <form class="form">
-      <input type="text" name="search-text" placeholder="Search images..." required>
-      <button type="submit">Search</button>
-    </form>
-    <div class="loader"></div>
-    <!-- <span class="loader hidden"></span> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-Db2TdIkw.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-CWKLx11g.css">
+  </head>
+  <body>
+    <span class="loader"></span>
 
-    <ul class="gallery"></ul>
+    <section class="search-section">
+      <form class="search-form" id="search-form">
+        <input
+          class="search-input"
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button type="submit" class="search-button">Search</button>
+      </form>
+    </section>
 
-    <button class="load-more hidden">Load more</button>
-  </main>
+    <section class="gallery-section">
+      <div class="gallery"></div>
+    </section>
 
-</body>
+  </body>
 </html>
