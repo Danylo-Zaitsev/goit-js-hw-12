@@ -2,48 +2,30 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const gallery = document.querySelector('.gallery');
-let lightbox = new SimpleLightbox('.gallery a');
+const lightbox = new SimpleLightbox('.gallery a');
 
-
-export function createGalleryMarkup(images) {
-
-  const validImages = images.filter(image => {
-    return image.largeImageURL && image.webformatURL && image.tags;
-  });
-
-
-  if (validImages.length > 0) {
-    gallery.insertAdjacentHTML(
-      'beforeend',
-      validImages
+export function renderImages(images) {
+    const markup = images
         .map(
-          image => `
-    <li class="gallery-item">
-      <a class="gallery-link" href="${image.largeImageURL}">
-        <img
-          class="gallery-image"
-          src="${image.webformatURL}"
-          data-source="${image.largeImageURL}"
-          alt="${image.tags}"
-        />
-      </a>
-      <p>Likes: ${image.likes}</p>
-      <p>Views: ${image.views}</p>
-      <p>Comments: ${image.comments}</p>
-      <p>Downloads:  ${image.downloads}</p>
-    </li>`
+            ({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
+            <li class="gallery-item">
+                <a href="${largeImageURL}" class="gallery-link">
+                    <img src="${webformatURL}" alt="${tags}" class="gallery-image" />
+                </a>
+                <div class="info">
+                    <p>❤️ ${likes}</p>
+                    <p>👀 ${views}</p>
+                    <p>💬 ${comments}</p>
+                    <p>⬇️ ${downloads}</p>
+                </div>
+            </li>`
         )
-        .join('')
-    );
+        .join('');
 
-
+    gallery.insertAdjacentHTML('beforeend', markup);
     lightbox.refresh();
-  } else {
-    console.warn('No valid images to render.');
-  }
 }
 
-
 export function clearGallery() {
-  gallery.innerHTML = '';
+    gallery.innerHTML = '';
 }
