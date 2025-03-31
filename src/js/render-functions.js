@@ -7,7 +7,7 @@ const loadMoreBtn = document.querySelector('.load-more');
 
 const lightbox = new SimpleLightbox('.gallery a');
 
-export function renderImages(images) {
+export function createGallery(images) {
   const markup = images
     .map(
       ({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
