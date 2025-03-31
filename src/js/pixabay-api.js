@@ -1,4 +1,4 @@
-// Замість fetchImages
+import axios from 'axios';
 export async function getImagesByQuery(query, page = 1, perPage = 15) {
   try {
     const response = await axios.get(BASE_URL, {
