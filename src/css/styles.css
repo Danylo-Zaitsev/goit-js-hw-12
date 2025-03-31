@@ -2,20 +2,27 @@
 @import url('./base.css');
 @import url('./gallery.css');
 
-/* Основне вирівнювання */
+/* Центрування контейнера */
 body {
   font-family: Arial, sans-serif;
   background-color: #fff;
   margin: 0;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
   padding: 40px 20px;
 }
 
-/* Форма пошуку */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 960px;
+}
+
+/* Пошукова форма */
 .form {
   display: flex;
   gap: 10px;
@@ -53,9 +60,9 @@ button:hover {
 /* Лоадер */
 .loader {
   display: none;
+  margin-bottom: 20px;
 }
 
 .loader.visible {
   display: inline-block;
-  margin-bottom: 20px;
 }
