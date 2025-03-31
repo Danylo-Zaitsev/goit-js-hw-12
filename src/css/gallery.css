@@ -23,7 +23,3 @@
   padding: 10px;
   font-size: 14px;
 }
-
-.loader.visible {
-  display: inline-block;
-}

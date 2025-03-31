@@ -2,7 +2,6 @@
 @import url('./base.css');
 @import url('./gallery.css');
 
-/* Центрування контейнера */
 body {
   font-family: Arial, sans-serif;
   background-color: #fff;
@@ -22,7 +21,6 @@ body {
   max-width: 960px;
 }
 
-/* Пошукова форма */
 .form {
   display: flex;
   gap: 10px;
@@ -57,7 +55,6 @@ button:hover {
   display: none;
 }
 
-/* Лоадер */
 .loader {
   display: none;
   margin-bottom: 20px;
